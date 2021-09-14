@@ -1,0 +1,677 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* utility clasess */
+
+.bg{
+    background: rgba(236,69,69);
+}
+
+.color{
+    color: rgba(236,69,69);
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+   /* btn ki style */
+
+.blubbox{
+    width: 300px;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /* border-radius: 15px; */
+    
+
+
+}
+
+
+.blubbox span{
+    height: 100%;
+    /* border-radius: 15px; */
+
+}
+
+.blubbox .blub{
+    position: relative;
+}
+
+.blubbox .blub #bulb-off{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(90deg);
+    
+    
+    
+}
+.blubbox .blub #bulb-on{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s ease;
+    transform: rotate(90deg);
+    animation: blib 1s infinite ease;
+}
+
+@keyframes blib{
+    0%{
+        opacity: 0;
+    }
+
+    20%{
+        opacity: 1;
+    }
+
+    40%{
+        opacity: 0;
+    }
+
+    60%{
+        opacity: 1;
+    }
+
+    80%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+}
+
+.blubbox:hover #bulb-on{
+    opacity: 1;
+    animation-iteration-count: 1;
+}
+
+.blubbox .btn button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+    background: linear-gradient(90deg, yellow 20%, rgb(255, 217, 5) 90%);
+}
+
+.blubbox .btn button a{
+    text-decoration: none;
+    color: #634439;
+}
+  
+/* section hedding ki style */
+ 
+#secheding{
+         width: 100%;
+         height: 200px;
+         background-color: whitesmoke;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+}
+
+#secheding .hedigbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#secheding .hedigbox h1{
+    font-size: 2.5rem;
+    font-family: -webkit-pictograph;
+    color: rgb(131, 125, 120);
+}
+
+#secheding .hedigbox hr{
+    width: 70px;
+    height: 5px;
+    background-color: rgba(43,142,255,1);
+    border: none;
+}
+
+
+
+body{
+    background-color: rgb(199, 199, 199);
+    position: relative;
+}
+
+
+/* profile ki style ho raha  */
+
+
+#proalt{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 18;
+
+}
+
+.blurrr{
+    background-color: blanchedalmond;
+    filter: brightness(10px);
+}
+
+
+#proalt .profile
+{
+   margin: 70px auto;
+    width: 300px;
+    height: 600px;
+    filter: blur(30px);
+    display: grid;
+    grid-template-rows: 70px auto 100px;
+    transform: translateY(-1000px);
+    transition: 0.4s ease-in;
+}
+
+#proalt .active{
+    transform: translateY(0px);
+    filter: blur(0px);
+
+}
+
+
+
+#proalt .profile .closbtn .clobtna{
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#proalt .profile .closbtn .clobtna span{
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 12px;
+}
+
+#proalt .profile .closbtn .clobtna span:nth-child(1){
+    transform: rotate(45deg);
+}
+
+#proalt .profile .closbtn .clobtna span:nth-child(2){
+    transform: rotate(-45deg);
+}
+
+#proalt .profile .profileimg{
+    background-color: rgb(33, 220, 226);
+}
+
+#proalt .profile .profileimg img{
+    width: 100%;
+    height: 100%;
+    
+
+}
+
+#proalt .profile .sociliconp{
+    background-color: rgb(230, 3, 45);
+}
+#proalt .profile .sociliconp img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+/* navbar ki style */
+
+
+#navbar{
+    width: 100%;
+    height: 100px;
+}
+
+#navbar .nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    
+    
+}
+
+#navbar .nav .logo{
+   width: 400px;
+   height: 100%;
+   /* padding: 8px; */
+   
+}
+
+#navbar .nav .logo img{
+    width: 300px;
+    height: 100%;
+    margin-left: 90px;
+    object-fit: cover;
+    filter: drop-shadow(2px 4px 6px black);
+
+}
+
+#navbar .nav .call{
+    width: 400px;
+   height: 100%;
+   filter: drop-shadow(2px 4px 6px black);
+    background: rgb(0 128 42);
+   
+}
+
+#navbar .nav .call span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+#navbar .nav .call span a{
+    color: white;
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-family: sans-serif;
+    font-weight: bold;
+
+}
+
+       /* nav bar ki style end */
+
+
+       #marq{
+           width: 100%;
+           height: 40px;
+           margin-top: 20px;
+           font-size: 2rem;
+           position: relative;
+       }
+
+       #marq .notis{
+           width: 130px;
+           height: 100%;
+           position: absolute;
+           top: 0;
+           left: 0;
+           bottom: 0;
+           background: rgb(0 128 42);
+           color: white;
+           text-align: center;
+           filter: drop-shadow(2px 4px 6px black);
+       }
+
+
+       /* news ki style end  */
+
+
+       #home{
+           width: 100%;
+           height: 70vh;
+           background-color: rgb(199, 199, 199);
+           position: relative;
+           
+       }
+
+       #home .homebox{
+           width: 100%;
+           height: 100%;
+       }
+
+       #home .homebox img{
+           width: 100%;
+           height: 100%;
+           background-position: center;
+           object-fit: cover;
+           filter: brightness(0.5);
+       }
+
+       #home .homecontent{
+           position: absolute;
+           right: 0;
+           top: 0;
+           width: 50%;
+           height: 100%;
+           float: right;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+
+       #home .homecontent .content{
+           width: 500px;
+           height: 500px;
+       }
+
+       #home .homecontent .content h2{
+           font-size: 2.4rem;
+           color: rgb(2, 126, 44);
+           font-weight: bold;
+       }
+
+       #home .homecontent .content h1{
+           font-size: 3rem;
+           color: white;
+       }
+
+       #home .homecontent .content hr{
+           width: 77%;
+           height: 14px;
+           background-color: rgba(236,69,69);
+           border: none;
+           margin-bottom: 30px;
+       }
+
+       #home .homecontent .content p{
+        font-size: 1.6rem;
+        color: white;
+       }
+       
+       #home .homecontent .content .btn1{
+           margin-top: 40px;
+       }
+
+
+       /* serviss box style ho */
+
+       #servis{
+           width: 100%;
+           height: 800px;
+           background-color: white;
+       }
+
+       #servis .serviscontenar{
+           margin: auto;
+           width: 90%;
+           height: 100%;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           flex-wrap: wrap;
+           
+           
+       }
+
+       #servis .serviscontenar .servisebox{
+           width: 496px;
+           height: 479px;
+           border: 2px solid rgb(131, 125, 120);
+           background-color: whitesmoke;
+           display: grid;
+           grid-template-rows: repeat(3, 50% 25% 25%);
+           border-radius: 15px;
+           
+       }
+
+       #servis .serviscontenar .servisebox:hover{
+           background-color: white;
+           border: none;
+           box-shadow: 0px 0px 9px rgb(131, 125, 120), 0px 0px 9px rgb(131, 125, 120);
+       }
+
+       #servis .serviscontenar .servisebox .srimg img{
+        width: 66%;
+        height: 81%;
+           background-position: center;
+ 
+       }
+
+       #servis .serviscontenar .servisebox .srconte{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+
+       }
+
+       #servis .serviscontenar .servisebox .srconte span{
+           text-align: center;
+       }
+
+
+       /* Products */
+
+
+       #products{
+           width: 100%;
+           height: 500px;
+           background-color: white;
+
+       }
+
+       #products .productmain{
+           width: 100%;
+           height: 100%;
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+           flex-wrap: wrap;
+
+       }
+
+       #products .productmain .productbox{
+          width: 300px;
+          height: 300px;
+          display: grid;
+          grid-template-rows: repeat(2, 80% 20%);
+          border: 2px solid rgb(131, 125, 120);
+          position: relative;
+       }
+
+       #products .productmain .productbox:hover{
+        border: none;
+        box-shadow: 0px 0px 9px rgb(131, 125, 120), 0px 0px 9px rgb(131, 125, 120);
+      
+        
+       }
+
+
+
+       #products .productmain .productbox .pbuy{
+           
+           position: absolute;
+           top: 0;
+           left: 0;
+           height: 100%;
+           width: 100%;
+           transform: scale(0);
+           transition: 0.4s;
+
+
+       }
+
+       #products .productmain .productbox .pbuy img{
+           width: 100%;
+           height: 100%;
+           background-position: center;
+       }
+
+       
+
+       #products .productmain .productbox:hover .pbuy{
+           transform: scale(1);
+       }
+
+
+       #products .productmain .productbox .imgp img{
+           width: 100%;
+           height: 100%;
+           padding: 6px;
+       }
+
+       #products .productmain .productbox:hover .imgp{
+        filter: blur(5px);
+    }
+
+       #products .productmain .productbox .pprise{
+        background-color: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+
+       #products .productmain .productbox .pprise h1{
+           text-align: center;
+           font-family: -webkit-pictograph;
+           color: rgb(131, 125, 120);
+    
+       }
+
+
+
+
+
+
+
+       /* address l */
+
+       #address{
+           width: 100%;
+           height: 450px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           background-color: white;
+       }
+
+       #address iframe{
+        width: 50%;
+    }
+
+
+
+        #addresses{
+            width: 47%;
+            margin: 0 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            font-family: -webkit-pictograph;
+        }
+
+        #addresses div{
+            width: 100%;
+
+        }
+
+
+        #addresses .addrebox Address{
+          font-style: normal;
+        }
+
+        #addresses .addrebox Address h1{
+            font-size: 2.4rem;
+            color: rgb(2, 126, 44);
+            font-weight: bold;
+        }
+
+        #addresses .addrebox Address ul li{
+            list-style: none;
+            font-family: -webkit-pictograph;
+            color: rgb(131, 125, 120);
+            font-size: 1.6rem;
+        }
+
+          
+
+        #addresses .addrtime{
+            margin-top: 60px;
+        }
+
+
+
+        #addresses .addrtime h1{
+            font-size: 2.4rem;
+            color: rgb(2, 126, 44);
+            font-weight: bold;
+        }
+
+        #addresses .timeboxse{
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 300px);
+        }
+
+        #addresses .timeboxse span{
+            color: rgb(131, 125, 120);
+            font-size: 1.6rem;
+        }
+
+
+     
+       /* footer ki style */
+
+       #footera{
+           width: 100%;
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+           flex-wrap: wrap-reverse;
+           
+       }
+
+       #footera .footbox1 {
+        filter: drop-shadow(2px 4px 6px black);
+       }
+
+       #footera .footbox1 span{
+        color: white;
+        font-size: 2rem;
+        font-family: sans-serif;
+        font-weight: bold;
+       }
+
+       #footera .footbox2 {
+        filter: drop-shadow(2px 4px 6px black);
+        background: rgb(0 128 42);
+       }
+
+       #footera .footbox2 img{
+
+        width: 300px;
+        height: 150px;
+        background-position: center;
+        object-fit: cover;
+
+       }
+
+       #footera .footbox3 {
+        filter: drop-shadow(2px 4px 6px black);
+       }
+
+       #footera .footbox3 span a{
+        color: white;
+        text-decoration: none;
+        font-size: 2.2rem;
+        font-family: sans-serif;
+        font-weight: bold;
+
+       }
+
+
