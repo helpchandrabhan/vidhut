@@ -159,15 +159,16 @@ body{
     right: 0;
     width: 100%;
     height: 100vh;
-    z-index: 18;
-    display: none;
+    z-index: 0;
+    
 
 }
 
 .blurrr{
     background-color: blanchedalmond;
     filter: brightness(10px);
-    display: block;
+    z-index: 18;
+    
 }
 
 
